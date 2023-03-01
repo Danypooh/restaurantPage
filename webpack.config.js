@@ -1,4 +1,5 @@
 const path = require('path');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
   mode: 'development',
@@ -7,6 +8,12 @@ module.exports = {
   devServer: {
     static: './dist',
   },
+  plugins: [
+    new HtmlWebpackPlugin({
+      title: 'Pasta Society',
+      template: './src/index.html',
+    }),
+  ],
   output: {
     filename: '[name].js',
     path: path.resolve(__dirname, 'dist'),
@@ -14,5 +21,17 @@ module.exports = {
   },
   optimization: {
     runtimeChunk: 'single'
-  }
+  },
+  module: {
+    rules: [
+      {
+        test: /\.css$/i,
+        use: ['style-loader', 'css-loader'],
+      },
+      {
+        test: /\.(png|svg|jpg|jpeg|gif)$/i,
+        type: 'asset/resource',
+      },
+    ],
+  },
 };
