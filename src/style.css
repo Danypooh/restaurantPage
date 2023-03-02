@@ -17,9 +17,14 @@ html {
   font-size: calc(0.625rem + 0.4vw);
 }
 
+#content {
+  overflow: nh ;
+}
+
 /* Header */
 header {
   position: sticky;
+  top: 0;
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
@@ -53,6 +58,13 @@ main {
   flex-flow: column;
 }
 
+a > img {
+  width: calc(0.625rem + 25vw);
+  height: calc(0.625rem + 25vw);
+  border-radius: 50%;
+  margin: 15px;
+}
+
 @media screen and (min-width: 500px) {
   ul {
     display: inline-flex;
@@ -64,12 +76,21 @@ main {
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
-    
   }
 }
 
-
-
 /* Footer */
+footer {
+  position: absolute;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  width: 100%;
+}
+
+/* Menu */
+
+/* Contact */
 
 /* Background */

@@ -12,6 +12,7 @@ module.exports = {
     new HtmlWebpackPlugin({
       title: 'Pasta Society',
       template: './src/index.html',
+      filename: './index.html',
     }),
   ],
   output: {
