@@ -3,10 +3,11 @@ import Pasta from './imgs/pasta.jpg'
 import Salad from './imgs/salad.jpg'
 import Dessert from './imgs/dessert.jpg'
 import Drink from './imgs/drink.jpg'
+import Logo from './imgs/logo.jpeg'
 
 const images = (function() {
-  
-  const _createImgHtml = (img, type) =>
+  // Private
+  const createImgHtml = (img, type) =>
     `
     <li class="products">
       <a href=""><img src="${img}" alt="${type}-image"></a>
@@ -14,27 +15,30 @@ const images = (function() {
     </li>
   `;
 
-  const _pizza = _createImgHtml(Pizza, 'pizza');
-  const _pasta = _createImgHtml(Pasta, 'pasta')
-  const _salad = _createImgHtml(Salad, 'salad')
-  const _dessert = _createImgHtml(Dessert, 'dessert')
-  const _drink = _createImgHtml(Drink, 'drink')
+  const pizza = createImgHtml(Pizza, 'pizza');
+  const pasta = createImgHtml(Pasta, 'pasta')
+  const salad = createImgHtml(Salad, 'salad')
+  const dessert = createImgHtml(Dessert, 'dessert')
+  const drink = createImgHtml(Drink, 'drink')
 
+  const logo = `<img id="logo" src="${Logo}" alt="the-pasta-society-logo">`
 
-
-  const getPizza = () => _pizza;
-  const getPasta = () => _pasta;
-  const getSalad = () => _salad;
-  const getDessert = () => _dessert;
-  const getDrink = () => _drink;
+  // Public
+  const getPizza = () => pizza;
+  const getPasta = () => pasta;
+  const getSalad = () => salad;
+  const getDessert = () => dessert;
+  const getDrink = () => drink;
+  const getLogo = () => logo;
 
   return {
     getPizza,
     getPasta,
     getSalad,
     getDessert,
-    getDrink
+    getDrink,
+    getLogo,
   }   
 })();
 
-export {images};
+export default images;

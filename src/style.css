@@ -23,21 +23,18 @@ html {
 
 /* Header */
 header {
-  position: sticky;
+  position: relative;
   top: 0;
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
   gap: 20px;
+  height: 10vh;
 }
 
-/* header > img {
-  
-} */
-
-div#slogan {
- flex-basis: 100%;
- text-align: center;
+#logo {
+  width: calc(0.5rem + 8vw);
+  height: calc(0.5rem + 8vw);
 }
 
 /* Main content */
@@ -81,7 +78,7 @@ a > img {
 
 /* Footer */
 footer {
-  position: absolute;
+  position: fixed;
   bottom: 0;
   display: flex;
   justify-content: center;
@@ -92,5 +89,15 @@ footer {
 /* Menu */
 
 /* Contact */
+#contact-content {
+  display: flex;
+  flex-flow: column;
+  gap: 10vh;
+  font-size: calc(1rem + 1vw);
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
 
 /* Background */

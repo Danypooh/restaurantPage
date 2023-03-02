@@ -1,14 +1,12 @@
-import {images} from './assets';
+import images from './assets';
 
 const homePage = (function() {  // Module for homePage HTML
+  // Private
   function createHeader() {
     const header = `
       <header>
         <h1 id="title">The Pasta Society</h1>
-        <img src="" alt="restaurant-logo">
-        <div id="slogan">Be part of the society: 
-          <a href="" id="contact">Contact</a>
-        </div>
+        ${images.getLogo()}
       </header>
       `;
     return header;
@@ -34,17 +32,24 @@ const homePage = (function() {  // Module for homePage HTML
   function createFooter() {
     const footer = `
       <footer>
-        <div>Thanks to Pixabay for the images</div>
+        <div id="slogan">Be part of the society: 
+          <a href="" id="contact">Contact</a>
+        </div>
       </footer>
       `;
     return footer;
   }
+ 
+  // Public
+  const getHeader = () => createHeader();
+  const getMainContent = () => createMainContent();
+  const getFooter = () => createFooter();
   
   return {
-    createHeader,
-    createMainContent,
-    createFooter,
+    getHeader,
+    getMainContent,
+    getFooter,
   }
 })()
 
-export {homePage};
+export default homePage;
