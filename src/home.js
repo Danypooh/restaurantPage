@@ -33,7 +33,7 @@ const home = (function() {  // Module for home HTML
     const footer = `
       <footer>
         <div id="slogan">Be part of the society: 
-          <a href="" id="contact">Contact</a>
+          <a href="#" id="contact">Contact</a>
         </div>
       </footer>
       `;
