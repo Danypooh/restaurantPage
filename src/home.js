@@ -1,6 +1,6 @@
 import images from './assets';
 
-const homePage = (function() {  // Module for homePage HTML
+const home = (function() {  // Module for home HTML
   // Private
   function createHeader() {
     const header = `
@@ -39,17 +39,17 @@ const homePage = (function() {  // Module for homePage HTML
       `;
     return footer;
   }
- 
-  // Public
-  const getHeader = () => createHeader();
-  const getMainContent = () => createMainContent();
-  const getFooter = () => createFooter();
-  
-  return {
-    getHeader,
-    getMainContent,
-    getFooter,
+
+  // Public 
+  function loadHome() {
+    const content = document.getElementById('content');
+    content.innerHTML= '';
+    content.insertAdjacentHTML("afterbegin", createHeader());
+    content.insertAdjacentHTML("beforeend", createFooter());
+    content.insertAdjacentHTML("beforeend", createMainContent());
   }
+  
+  return loadHome;
 })()
 
-export default homePage;
+export default home;

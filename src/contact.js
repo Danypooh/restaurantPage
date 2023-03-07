@@ -1,6 +1,8 @@
+import home from "./home";
+
 const contact = (function() {
   // Private
-  function createContactContent() {
+  function createContact() {
     const content = `
       <div id="contact-content">
         <div>+52 222 805 2552</div>
@@ -11,13 +13,29 @@ const contact = (function() {
     `;
     return content;
   }
+
+  function createFooter() {
+    const footer = `
+      <footer>
+        <div id="slogan">Be part of the society: 
+          <a href="" id="home">Home</a>
+        </div>
+      </footer>
+      `;
+    return footer;
+  }
   
   // Public
-  const getContact = () => createContactContent();
-
-  return {
-    getContact,
+  function loadContact() {
+    const content = document.getElementById('content');
+    content.innerHTML= '';
+    content.insertAdjacentHTML("afterbegin", createContact());
+    content.insertAdjacentHTML("beforeend", createFooter());
+    const homeId = document.getElementById('home');
+    homeId.addEventListener("click", () => home());
   }
+
+  return loadContact;
 })();
 
 export default contact;
