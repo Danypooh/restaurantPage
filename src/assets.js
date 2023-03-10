@@ -3,7 +3,7 @@ import Pasta from './imgs/pasta.jpg'
 import Salad from './imgs/salad.jpg'
 import Dessert from './imgs/dessert.jpg'
 import Drink from './imgs/drink.jpg'
-import Logo from './imgs/logo.jpeg'
+import Logo from './imgs/logo.png'
 
 const images = (function() {
   // Private

@@ -2,23 +2,37 @@
 html {
   box-sizing: border-box;
 }
+
+@font-face {
+  font-family: 'bauer-bodoni';
+  src: url('./fonts/bauer-bodoni.otf') format('opentype');
+  font-weight: bold;
+  font-style: normal;
+}
   
 *,
 *::before,
 *::after {
   box-sizing: inherit;
   margin: 0;
-  font-family: "Source Sans Pro", -apple-system, BlinkMacSystemFont, "Segoe UI",
-    Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-family: 'bauer-bodoni';
 }
   
 :root {
-  --mid-orange: #fdba74;
+  --pasta-white: white;
+  --pasta-black: black;
   font-size: calc(0.625rem + 0.4vw);
 }
 
+
+
 #content {
   overflow: nh ;
+}
+
+body {
+  background-image: url('./imgs/background.jpeg');
+  color: var(--pasta-white);
 }
 
 /* Header */
@@ -27,14 +41,22 @@ header {
   top: 0;
   display: flex;
   justify-content: center;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   gap: 20px;
-  height: 10vh;
+  height: calc(10vh + 2vw);
+  font-size: calc(0.5rem + 2vw);
+  background-color: var(--pasta-black);
+}
+
+#title {
+  align-self: center;
 }
 
 #logo {
-  width: calc(0.5rem + 8vw);
-  height: calc(0.5rem + 8vw);
+  width: calc(1rem + 8vh);
+  height: calc(1rem + 8vh);
+  border-radius: 50%;
+  margin-top: 1%;
 }
 
 /* Main content */
@@ -84,6 +106,13 @@ footer {
   justify-content: center;
   align-content: center;
   width: 100%;
+  height: calc(5vh + 1vw);
+  font-size: calc(0.2rem + 2vw);
+  background-color: var(--pasta-black);
+}
+
+#slogan {
+  align-self: center;
 }
 
 /* Menu */
