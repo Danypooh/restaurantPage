@@ -24,14 +24,16 @@ html {
   font-size: calc(0.625rem + 0.4vw);
 }
 
-
-
 #content {
   overflow: nh ;
 }
 
 body {
   background-image: url('./imgs/background.jpeg');
+  color: var(--pasta-white);
+}
+
+a {
   color: var(--pasta-white);
 }
 
@@ -44,7 +46,7 @@ header {
   flex-wrap: nowrap;
   gap: 20px;
   height: calc(10vh + 2vw);
-  font-size: calc(0.5rem + 2vw);
+  font-size: calc(0.5rem + 3vw);
   background-color: var(--pasta-black);
 }
 
@@ -62,10 +64,6 @@ header {
 /* Main content */
 ul {
   list-style-type: none;
-}
-
-a {
-  text-decoration: none;
 }
 
 main {
@@ -108,7 +106,7 @@ footer {
   align-content: center;
   width: 100%;
   height: calc(5vh + 1vw);
-  font-size: calc(0.2rem + 2vw);
+  font-size: calc(0.5rem + 3vw);
   background-color: var(--pasta-black);
 }
 
