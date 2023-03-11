@@ -9,6 +9,8 @@ const initializeWebsite = (function() {
 
     const contactId = document.getElementById('contact');
     contactId.addEventListener("click", () => contact());
+
+    
     const fifthProduct = document.querySelector("#product-list :nth-child(5)");
     fifthProduct.addEventListener("click", () => menu.loadFifthMenu());
   }

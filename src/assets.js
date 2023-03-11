@@ -11,7 +11,7 @@ const images = (function() {
     `
     <li class="products">
       <a href="#"><img src="${img}" alt="${type}-image"></a>
-      <div></div>
+      <a href="#">${type}</a>
     </li>
     `;
 

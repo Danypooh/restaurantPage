@@ -9,7 +9,6 @@ const menu = (function() {
     `
     <div id="menu-content">
       <a href="#"><img src="${img}" alt="${type}-menu"></a>
-      <div></div>
     </div>
     `;
   

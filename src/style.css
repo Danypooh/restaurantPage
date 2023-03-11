@@ -76,11 +76,22 @@ main {
   padding-bottom: 15%;
 }
 
+.products {
+  display: flex;
+  align-items: center;
+  border-radius: 10%;
+  background-color: rgb(0, 0, 0, 0.9);
+  margin: 5%;
+  font-size: calc(1rem + 2vw);
+  gap: 15%;
+}
+
 a > img {
   width: calc(25vw + 10vh);
   height: calc(25vw + 10vh);
-  border-radius: 50%;
+  border-radius: 15%;
   margin: 15px;
+  margin-left: 0;
 }
 
 @media screen and (min-width: 500px) {
